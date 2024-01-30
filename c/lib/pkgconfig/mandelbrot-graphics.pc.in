@@ -1,0 +1,12 @@
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: mandelbrot-graphics
+Description: CPU-based rendering of the Mandelbrot set
+Version: 0.1.0.0
+URL: https://code.mathr.co.uk/mandelbrot-graphics
+Requires: cairo mandelbrot-numerics
+Libs: -fopenmp -L${libdir} -lmandelbrot-graphics
+Libs.private: -lmpc -lmpfr -lgmp -lm
+Cflags: -fopenmp -I${includedir}
